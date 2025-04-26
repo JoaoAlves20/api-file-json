@@ -1,0 +1,25 @@
+{
+  "name": "api-file-json",
+  "version": "1.0.0",
+  "description": "Manipulando arquivo JSON via API com Node puro",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "test": "npx mocha test/productService.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoAlves20/api-file-json.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/JoaoAlves20/api-file-json/issues"
+  },
+  "homepage": "https://github.com/JoaoAlves20/api-file-json#readme",
+  "dependencies": {
+    "mocha": "^11.1.0"
+  }
+}
