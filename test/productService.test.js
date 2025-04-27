@@ -23,8 +23,14 @@ const CREATE_DEFAULT_PRODUCT = {
     category: 'testando'
 }
 
+const UPDATE_DEFAULT_PRODUCT = {
+    product: 'max stell',
+    price: 45.8,
+    category: 'brinquedo'
+}
+
 describe('Testando os services', function () {
-    it('mostrando todos os produtos', async function () {
+    it.only('mostrando todos os produtos', async function () {
         const expect = DEFAULT_PRODUCTS;
         const data = await ProductService.findAll();
 
@@ -44,8 +50,29 @@ describe('Testando os services', function () {
         const expect = CREATE_DEFAULT_PRODUCT;
         await ProductService.create(CREATE_DEFAULT_PRODUCT);
 
-        const result = await ProductService.findById(3);
+        const all = await ProductService.findAll()
+
+        const result = await ProductService.findById(all.length);
         delete result.id;
+
+        assert.deepEqual(result, expect);
+    })
+
+    it('atualizando um produto', async function () {
+        const expect = UPDATE_DEFAULT_PRODUCT;
+        await ProductService.update(4, UPDATE_DEFAULT_PRODUCT);
+
+        const result = await ProductService.findById(4);
+        delete result.id;
+
+        assert.deepEqual(result, expect);
+    })
+
+    it('deletando usuario', async function () {
+        const data = await ProductService.findAll();
+        
+        const expect = await ProductService.findById(data.length);
+        const result = await ProductService.delete(data.length);
 
         assert.deepEqual(result, expect);
     })
