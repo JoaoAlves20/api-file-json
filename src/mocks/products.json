@@ -1,14 +1,1 @@
-[
-    {
-        "id": 1,
-        "product": "apple",
-        "price": 23.5,
-        "category": "fruit"
-    },
-    {
-        "id": 2,
-        "product": "eat",
-        "price": 50.56,
-        "category": "food"
-    }
-]
+[{"id":1,"product":"apple","price":23.5,"category":"fruit"},{"id":2,"product":"eat","price":50.56,"category":"food"},{"id":3,"product":"teste","price":12.4,"category":"testando"},{"id":4,"product":"teste","price":12.4,"category":"testando"},{"id":5,"product":"teste","price":12.4,"category":"testando"}]
