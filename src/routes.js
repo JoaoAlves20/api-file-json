@@ -13,8 +13,18 @@ export const router = [
         handler: asyncHandler(ProductController.findById)
     },
     {
-        endpoint: '/products',
+        endpoint: '/product',
         method: 'POST',
-        handler: asyncHandler(ProductController.create)
+        handler: asyncHandler(ProductController.createProduct)
+    },
+    {
+        endpoint: '/product/:id',
+        method: 'PUT',
+        handler: asyncHandler(ProductController.updateProduct)
+    },
+    {
+        endpoint: '/product/:id',
+        method: 'DELETE',
+        handler: asyncHandler(ProductController.deleteProduct)
     },
 ]
